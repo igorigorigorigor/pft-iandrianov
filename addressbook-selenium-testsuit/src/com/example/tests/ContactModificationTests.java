@@ -1,18 +1,37 @@
 package com.example.tests;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
 import org.testng.annotations.Test;
 
 public class ContactModificationTests extends TestBase {
 	
-	@Test
-	public void modifySomeGroup () {
+	@Test(dataProvider = "randomValidContactGenerator")
+	public void modifySomeGroup (ContactData contact) {
 		app.getnavigationhelper().openMainPage();
-		app.getcontacthelper().initContactModification(1);
-		ContactData contact = new ContactData();
-		contact.firstname = "Sub";
-		contact.lastname = "Zero";
-		app.getcontacthelper().fillContactData(contact);
+		
+		//save state
+		List<ContactData> oldList = app.getcontacthelper().getContacts();
+		
+		Random rnd = new Random();
+		int index = rnd.nextInt(oldList.size() - 1);
+		
+		//actions
+		app.getcontacthelper().initContactModification(index);
+		app.getcontacthelper().fillEditedContactData(contact);
 		app.getcontacthelper().submitContactModification();
-		app.getnavigationhelper().gotoGroupsPage();
+		app.getnavigationhelper().gotoHomePage();
+		
+		//save new state
+		List<ContactData> newList = app.getcontacthelper().getContacts();
+				  
+		oldList.remove(index);
+		oldList.add(contact);
+		Collections.sort(oldList);
+		assertEquals(newList, oldList);
 	}
 }

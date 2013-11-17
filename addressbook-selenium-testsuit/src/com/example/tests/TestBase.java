@@ -46,5 +46,20 @@ public class TestBase {
 			  return "test" + rnd.nextInt();
 		  }
 	  }
+	  
+	  
+	  @DataProvider
+		public Iterator<Object[]> randomValidContactGenerator(){
+			List<Object[]> list = new ArrayList<Object[]>();
+			for (int i = 0; i<5; i++){
+				ContactData contact = new ContactData("Kung", "Lao", "Bloodspot sq.", "14", "+79098881111", "Fujitsu Finland", "cagejohnny@hotmail.com", "cagejohnny@gmail.com", "1", "January", "1980", "Rob", "Crimespot sq.", "15");
+				contact.firstname = generateRandomString();
+				contact.lastname = contact.firstname;
+				list.add(new Object[]{contact});
+			}
+			return list.iterator();
+		}
+		
+		
 	
 }
