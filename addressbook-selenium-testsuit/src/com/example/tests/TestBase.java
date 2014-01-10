@@ -29,10 +29,10 @@ public class TestBase {
 	  public Iterator<Object[]> randomValidGroupGenerator() {
 		  List<Object[]> list = new ArrayList<Object[]>();
 		  for (int i=0; i<5; i++){
-			  GroupData group = new GroupData();
-		  	  group.groupname = generateRandomString();
-		  	  group.header = generateRandomString();
-			  group.footer = generateRandomString();
+			  GroupData group = new GroupData()
+			  .withGroupname(generateRandomString())
+			  .withHeader(generateRandomString())
+			  .withFooter(generateRandomString());
 			  list.add(new Object[]{group});
 		  }
 		  return list.iterator();
@@ -52,12 +52,14 @@ public class TestBase {
 		public Iterator<Object[]> randomValidContactGenerator(){
 			List<Object[]> list = new ArrayList<Object[]>();
 			for (int i = 0; i<5; i++){
-				ContactData contact = new ContactData("Kung", "Lao", "Bloodspot sq.", "14", "+79098881111", "Fujitsu Finland", "cagejohnny@hotmail.com", "cagejohnny@gmail.com", "1", "January", "1980", "Rob", "Crimespot sq.", "15");
-				contact.firstname = generateRandomString();
-				contact.lastname = contact.firstname;
+				ContactData contact = new ContactData("Kung", "Lao", "Bloodspot sq.", "14", "+79098881111", "Fujitsu Finland", "cagejohnny@hotmail.com", "cagejohnny@gmail.com", "1", "January", "1980", "[none]", "Crimespot sq.", "15")
+				  .withFirstname(generateRandomString())
+				  .withLastname(generateRandomString());
 				list.add(new Object[]{contact});
 			}
 			return list.iterator();
+			
+			
 		}
 		
 		
