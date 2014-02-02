@@ -1,11 +1,11 @@
 package com.example.fw;
 
-import static org.junit.Assert.fail;
-
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 
 public class ApplicationManager {
@@ -13,6 +13,8 @@ public class ApplicationManager {
 	public WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
+	@SuppressWarnings("unused")
+	private Properties properties;
 	
 	
 	public NavigationHelper navigationhelper;
@@ -20,11 +22,20 @@ public class ApplicationManager {
 	public ContactHelper contacthelper;
 	
 	
-	public ApplicationManager() {
-		driver = new FirefoxDriver();
-	    baseUrl = "http://localhost/";
+	public ApplicationManager(Properties properties) {
+		this.properties = properties;
+		String browser = properties.getProperty("browser");
+		if("firefox".equals(browser)){
+			driver = new FirefoxDriver();
+		} else if ("ie".equals(browser)){
+			System.setProperty("webdriver.ie.driver", "D:\\Study\\PFT\\IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+		} else {
+			throw new Error("Unsupported browser: " + browser);
+		}		
+	    baseUrl = properties.getProperty("baseUrl");
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    
+	    driver.get(baseUrl);
 	    navigationhelper = new NavigationHelper(this);
 	    grouphelper = new GroupHelper(this);
 	    contacthelper = new ContactHelper(this);
@@ -34,7 +45,7 @@ public class ApplicationManager {
 		driver.quit();
 	}
 	
-	public NavigationHelper getnavigationhelper(){
+	public NavigationHelper navigateTo(){
 		if (navigationhelper == null){
 			navigationhelper = new NavigationHelper(this);
 		}

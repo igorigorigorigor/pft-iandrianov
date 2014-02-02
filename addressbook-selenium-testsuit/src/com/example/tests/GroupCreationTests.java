@@ -1,51 +1,43 @@
 package com.example.tests;
 
+
+import java.util.Iterator;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
 
-import static org.testng.Assert.assertEquals;
+import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
+import static com.example.tests.GroupDataGenerator.loadGroupsFromXmlFile;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThat;
+import java.io.*;
 
-import org.testng.annotations.Test;
+import com.example.utils.SortedListOf;
 
 
 
+@SuppressWarnings("unused")
 public class GroupCreationTests extends TestBase {
-  
-  
+
+  @DataProvider
+  public Iterator<Object[]> groupsFromFile() throws IOException {
+	  return wrapGroupsForDataProvider(loadGroupsFromXmlFile(new File("groups.txt"))).iterator();
+  }
+	 	
 	
-  @Test(dataProvider = "randomValidGroupGenerator")
+@Test(dataProvider = "groupsFromFile")
   public void testGroupCreationWithValidData(GroupData group) throws Exception {
-    app.getnavigationhelper().openMainPage();
-    app.getnavigationhelper().gotoGroupsPage();
-    
     //save state
-    List<GroupData> oldList = app.getgrouphelper().getGroups();
+	SortedListOf<GroupData> oldList = app.getgrouphelper().getGroups();
         
     //actions
-    app.getgrouphelper().initNewGroupCreation();
-	app.getgrouphelper().fillGroupForm(group);   
-    app.getgrouphelper().submitGroupCreation();
-    app.getnavigationhelper().gotoGroupsPage();
+	app.getgrouphelper().createGroup(group);
+	    
     
     //save new state
-    List<GroupData> newList = app.getgrouphelper().getGroups();
+    SortedListOf<GroupData> newList = app.getgrouphelper().getGroups();
     
     //compare states
-    AssertJUnit.assertEquals(newList.size(), oldList.size() + 1);
-    
-    oldList.add(group);
-    Collections.sort(oldList);
-    AssertJUnit.assertEquals(newList, oldList);
+    assertThat(newList, equalTo(oldList.withAdded(group)));
   }
 }
