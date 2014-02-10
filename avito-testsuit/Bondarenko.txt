@@ -1,0 +1,9 @@
+ 
+<option value="2123">Козья Слобода</option>
+<option value="24">Квартиры</option>
+<option value="1059">Продам</option>
+<option value="5698">3</option>
+<option value="5254">Вторичка</option>
+<option value="5120">1</option>
+<option value="5186">5</option>
+<option value="5245">Панельный</option>
