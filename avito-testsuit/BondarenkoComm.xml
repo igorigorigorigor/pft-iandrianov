@@ -1,12 +1,22 @@
-<commercial>
-  <categoryOfAd>test-643666983</categoryOfAd>
-  <typeOfAd>test-620596247</typeOfAd>
-  <objectType>test-1605665578</objectType>
-  <isBusinessReady>test368193484</isBusinessReady>
-  <area>-1660985696</area>
-  <subwayStation>test1516793234</subwayStation>
-  <address>test-1954085108</address>
-  <adName>test-500928546</adName>
-  <description>test667247172</description>
-  <price>1617762826</price>
-</commercial>
+<Commercial>
+  <categoryOfAd>Коммерческая недвижимость</categoryOfAd>
+  <typeOfAd>Продам</typeOfAd>
+  <objectType>Помещение свободного назначения</objectType>
+  <isBusinessReady>Нет</isBusinessReady>
+  <area>64</area>
+  <subwayStation>Козья Слобода</subwayStation>
+  <address>Бондаренко, 23</address>
+  <adName>Продам 3к кв-ру под коммер. недв, Бондаренко, 23</adName>
+  <description>64\19+19+11\6. Отличный ремонт. Все комнаты изолированные. Пластиковые окна. Санузел в современном кафеле. Колонка-автомат. Новые межкомнатные двери. Большая темнушка. Хорошая железная дверь. Чистый подъезд. Имеется домофон. Кооперативный дом. Идеально под нежилое:
+
+1) Находится на Первой линии
+
+2) Имеется карман для парковки покупателей
+
+3) Два окна выходят на дорогу, два - во двор
+
+4) В соседних квартирах аптека, салон дизайна и др..
+
+Рядом станция метро "Козья Слобода", школа и детский сад. Один взрослый собственник. Чистая продажа. Торг.</description>
+  <price>3750000</price>
+</Commercial>

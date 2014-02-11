@@ -43,16 +43,19 @@ public class CommercialHelper extends HelperBase{
 		type(By.id("fld_price"), comm.getPrice());
 		click(By.id("package-free"));
 		
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\578403467.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\578403760.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\578404032.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\578403230.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\543265999.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\543268249.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\572116910.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\543266801.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\543267513.jpg");
-		uploadImage("fld_images", "E:\\Mother's\\Ads\\Бондаренко\\543268971.jpg");
+		
+		uploadImage("fld_images", "\\Bondarenko\\580615964.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616165.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616128.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\588964115.jpg");
+		
+		uploadImage("fld_images", "\\Bondarenko\\580616271.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616293.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616186.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616301.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616312.jpg");
+		uploadImage("fld_images", "\\Bondarenko\\580616321.jpg");
+		
 		
 		
 		click(By.cssSelector("#package-free > div.package-label > h3"));

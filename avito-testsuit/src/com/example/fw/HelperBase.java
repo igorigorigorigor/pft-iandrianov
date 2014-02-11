@@ -6,18 +6,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class HelperBase {
 
 	protected ApplicationManager manager;
 	protected WebDriver driver;
 	protected boolean acceptNextAlert;
+	public String CurrentDirectory;
+	public WebDriverWait wait;
+	
 
 	public HelperBase(ApplicationManager manager) {
 		this.manager = manager;
 		this.driver = manager.driver;
 		this.acceptNextAlert = manager.acceptNextAlert;
+		this.CurrentDirectory = System.getProperty("user.dir").toString();
+		this.wait = new WebDriverWait(driver, 15);
 	}
 	
 	public boolean isElementPresent(By by) {
@@ -71,9 +78,7 @@ public abstract class HelperBase {
 	}
 	
 	protected void uploadImage(String id, String image) {
-		driver.findElement(By.id(id)).sendKeys(image);
+		wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
+		driver.findElement(By.id(id)).sendKeys(CurrentDirectory + image);
 	}
-	
-		
-	
 }

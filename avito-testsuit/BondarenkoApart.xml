@@ -1,4 +1,4 @@
-<apartment>
+<Apartment>
   <subwayStation>Козья Слобода</subwayStation>
   <categoryOfAd>Квартиры</categoryOfAd>
   <typeOfAd>Продам</typeOfAd>
@@ -21,4 +21,4 @@
 
 Рядом станция метро "Козья Слобода", школа и детский сад. Один взрослый собственник. Чистая продажа. Торг.</description>
   <price>3750000</price>
-</apartment>
+</Apartment>

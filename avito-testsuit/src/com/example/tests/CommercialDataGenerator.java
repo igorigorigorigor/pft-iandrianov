@@ -28,7 +28,7 @@ public class CommercialDataGenerator {
 	
 	private static void saveCommercialToXmlFile(Commercial comm, File file) throws IOException {
 		XStream xstream = new XStream();
-		xstream.alias("commercial", Commercial.class);
+		xstream.alias("Commercial", Commercial.class);
 		String xml = xstream.toXML(comm);		
 		FileWriter writer = new FileWriter(file);
 		writer.write(xml);
@@ -38,7 +38,7 @@ public class CommercialDataGenerator {
 	
 	public static List<Commercial> loadCommercialFromXmlFile(File file) throws IOException {
 		XStream xstream = new XStream();
-		xstream.alias("ñommercial", Commercial.class);
+		xstream.alias("Commercial", Commercial.class);
 		List<Commercial> list = new ArrayList<Commercial>();
 		Commercial comm = (Commercial) xstream.fromXML(file);
 		list.add(comm);

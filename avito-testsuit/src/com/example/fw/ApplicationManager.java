@@ -4,6 +4,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -14,6 +15,7 @@ public class ApplicationManager {
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
 	private Properties properties;
+	
 	
 	
 	public NavigationHelper navigationhelper;
@@ -31,12 +33,18 @@ public class ApplicationManager {
 		} else if ("ie".equals(browser)){
 			System.setProperty("webdriver.ie.driver", "D:\\Study\\PFT\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
+		} else if ("chrome".equals(browser)){
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			driver = new ChromeDriver();
 		} else {
 			throw new Error("Unsupported browser: " + browser);
 		}		
 	    baseUrl = properties.getProperty("baseUrl");
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.get(baseUrl);
+	    
+	   
+	    
 	    navigationhelper = new NavigationHelper(this);
 
 	    apartmenthelper = new ApartmentHelper(this, properties);
@@ -45,7 +53,7 @@ public class ApplicationManager {
 	}
 	
 	public void stop() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	public NavigationHelper navigateTo(){

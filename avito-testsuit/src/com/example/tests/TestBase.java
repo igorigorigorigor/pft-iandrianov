@@ -23,7 +23,7 @@ public class TestBase {
 
 	@BeforeTest
 	public void setUp() throws Exception {
-		String configFile = System.getProperty("configFile", "firefox.properties");
+		String configFile = System.getProperty("configFile", "chrome.properties");
 		Properties properties = new Properties();
 		properties.load(new FileReader(new File(configFile)));
 		app = new ApplicationManager(properties);

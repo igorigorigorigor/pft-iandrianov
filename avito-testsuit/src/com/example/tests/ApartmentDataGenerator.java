@@ -28,7 +28,7 @@ public class ApartmentDataGenerator {
 	
 	private static void saveApartmentToXmlFile(Apartment flat, File file) throws IOException {
 		XStream xstream = new XStream();
-		xstream.alias("apartment", Apartment.class);
+		xstream.alias("Apartment", Apartment.class);
 		String xml = xstream.toXML(flat);		
 		FileWriter writer = new FileWriter(file);
 		writer.write(xml);
@@ -39,7 +39,7 @@ public class ApartmentDataGenerator {
 	
 	public static List<Apartment> loadApartmentFromXmlFile(File file) throws IOException {
 		XStream xstream = new XStream();
-		xstream.alias("apartment", Apartment.class);
+		xstream.alias("Apartment", Apartment.class);
 		List<Apartment> list = new ArrayList<Apartment>();
 		Apartment flat = (Apartment) xstream.fromXML(file);
 		list.add(flat);
