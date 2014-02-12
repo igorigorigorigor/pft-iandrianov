@@ -15,6 +15,7 @@ import org.testng.annotations.DataProvider;
 import com.example.fw.Apartment;
 import com.example.fw.ApplicationManager;
 import com.example.fw.Commercial;
+import com.example.fw.House;
 
 
 public class TestBase {
@@ -50,6 +51,15 @@ public class TestBase {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (Commercial comm : comms) {
 			list.add(new Object[]{comm});
+		}
+		return list;
+	}
+	
+	@DataProvider
+	public static List<Object[]> wrapHouseForDataProvider(List<House> houses) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (House house : houses) {
+			list.add(new Object[]{house});
 		}
 		return list;
 	}
