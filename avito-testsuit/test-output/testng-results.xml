@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16636" started-at="2014-02-11T13:47:38Z" finished-at="2014-02-11T13:47:55Z">
+  <suite name="Default suite" duration-ms="16587" started-at="2014-02-15T09:16:25Z" finished-at="2014-02-15T09:16:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16636" started-at="2014-02-11T13:47:38Z" finished-at="2014-02-11T13:47:55Z">
+    <test name="Default test" duration-ms="16587" started-at="2014-02-15T09:16:25Z" finished-at="2014-02-15T09:16:42Z">
       <class name="com.example.tests.CommercialCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.CommercialCreationTests@1740f55]" name="setUp" is-config="true" duration-ms="3662" started-at="2014-02-11T17:47:38Z" finished-at="2014-02-11T17:47:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.CommercialCreationTests@7b839aa9]" name="setUp" is-config="true" duration-ms="5945" started-at="2014-02-15T13:16:25Z" finished-at="2014-02-15T13:16:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCommercialCreationWithValidData(com.example.fw.Commercial)[pri:0, instance:com.example.tests.CommercialCreationTests@1740f55]" name="testCommercialCreationWithValidData" duration-ms="11184" started-at="2014-02-11T17:47:42Z" data-provider="commercialFromFile" finished-at="2014-02-11T17:47:53Z">
+        <test-method status="PASS" signature="testCommercialCreationWithValidData(com.example.fw.Commercial)[pri:0, instance:com.example.tests.CommercialCreationTests@7b839aa9]" name="testCommercialCreationWithValidData" duration-ms="10507" started-at="2014-02-15T13:16:32Z" data-provider="commercialFromFile" finished-at="2014-02-15T13:16:42Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCommercialCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.CommercialCreationTests@1740f55]" name="tearDown" is-config="true" duration-ms="1675" started-at="2014-02-11T17:47:53Z" finished-at="2014-02-11T17:47:55Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.CommercialCreationTests@7b839aa9]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-02-15T13:16:42Z" finished-at="2014-02-15T13:16:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
