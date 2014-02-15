@@ -24,6 +24,8 @@ public class ApplicationManager {
 	
 	public CommercialHelper commercialhelper;
 	
+	public HouseHelper househelper;
+	
 	
 	public ApplicationManager(Properties properties) {
 		this.properties = properties;
@@ -50,6 +52,8 @@ public class ApplicationManager {
 	    apartmenthelper = new ApartmentHelper(this, properties);
 	    
 	    commercialhelper = new CommercialHelper(this, properties);
+	    
+	    househelper = new HouseHelper(this, properties);
 	}
 	
 	public void stop() {
@@ -76,5 +80,12 @@ public class ApplicationManager {
 			commercialhelper  = new CommercialHelper(this, properties);
 		}
 		return commercialhelper;
+	}
+	
+	public HouseHelper gethousehelper() {
+		if (househelper == null){
+			househelper  = new HouseHelper(this, properties);
+		}
+		return househelper;
 	}
 }

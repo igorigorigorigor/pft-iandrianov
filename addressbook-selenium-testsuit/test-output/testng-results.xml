@@ -1,76 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46261" started-at="2014-02-02T22:09:50Z" finished-at="2014-02-02T22:10:36Z">
+  <suite name="Default suite" duration-ms="43522" started-at="2014-02-09T11:11:43Z" finished-at="2014-02-09T11:12:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46261" started-at="2014-02-02T22:09:50Z" finished-at="2014-02-02T22:10:36Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="setUp" is-config="true" duration-ms="22748" started-at="2014-02-03T02:09:50Z" finished-at="2014-02-03T02:10:13Z">
+    <test name="Default test" duration-ms="43522" started-at="2014-02-09T11:11:43Z" finished-at="2014-02-09T11:12:26Z">
+      <class name="com.example.tests.ContactCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="setUp" is-config="true" duration-ms="16753" started-at="2014-02-09T15:11:43Z" finished-at="2014-02-09T15:12:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="testGroupCreationWithValidData" duration-ms="5763" started-at="2014-02-03T02:10:13Z" data-provider="groupsFromFile" finished-at="2014-02-03T02:10:19Z">
+        <test-method status="FAIL" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="testContactCreationWithValidData" duration-ms="5715" started-at="2014-02-09T15:12:00Z" data-provider="contactsFromFile" finished-at="2014-02-09T15:12:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupname=test1462877836]]]>
+                <![CDATA[ContactData [firstname=test-149091201 lastname=test1162348483]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.ContactCreationTests.testContactCreationWithValidData(ContactCreationTests.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="testContactCreationWithValidData" duration-ms="5346" started-at="2014-02-09T15:12:05Z" data-provider="contactsFromFile" finished-at="2014-02-09T15:12:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContactData [firstname= lastname=test283538474]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="testGroupCreationWithValidData" duration-ms="4035" started-at="2014-02-03T02:10:19Z" data-provider="groupsFromFile" finished-at="2014-02-03T02:10:23Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="FAIL" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="testContactCreationWithValidData" duration-ms="5001" started-at="2014-02-09T15:12:11Z" data-provider="contactsFromFile" finished-at="2014-02-09T15:12:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupname=]]]>
+                <![CDATA[ContactData [firstname= lastname=]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.ContactCreationTests.testContactCreationWithValidData(ContactCreationTests.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="testGroupCreationWithValidData" duration-ms="4320" started-at="2014-02-03T02:10:23Z" data-provider="groupsFromFile" finished-at="2014-02-03T02:10:27Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="FAIL" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="testContactCreationWithValidData" duration-ms="5052" started-at="2014-02-09T15:12:16Z" data-provider="contactsFromFile" finished-at="2014-02-09T15:12:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupname=test-287964738]]]>
+                <![CDATA[ContactData [firstname=test820883890 lastname=test-609212113]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.ContactCreationTests.testContactCreationWithValidData(ContactCreationTests.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="testGroupCreationWithValidData" duration-ms="4390" started-at="2014-02-03T02:10:27Z" data-provider="groupsFromFile" finished-at="2014-02-03T02:10:31Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="FAIL" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="testContactCreationWithValidData" duration-ms="5070" started-at="2014-02-09T15:12:21Z" data-provider="contactsFromFile" finished-at="2014-02-09T15:12:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupname=]]]>
+                <![CDATA[ContactData [firstname= lastname=test-1775298362]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test-1775298362], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test-1775298362], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test-1775298362], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+     but: was <[ContactData [firstname= lastname=], ContactData [firstname= lastname=], ContactData [firstname= lastname=test-1735743936], ContactData [firstname= lastname=test-1775298362], ContactData [firstname= lastname=test1073862179], ContactData [firstname= lastname=test283538474], ContactData [firstname= lastname=test450035427], ContactData [firstname= lastname=test458017687], ContactData [firstname= lastname=test554808419], ContactData [firstname=test-168285101 lastname=test-600523282], ContactData [firstname=test-790413402 lastname=test-1968317084], ContactData [firstname=test-2089303806 lastname=test-7207670], ContactData [firstname=test-1832282663 lastname=test-904442283], ContactData [firstname=test-149091201 lastname=test1162348483], ContactData [firstname=test1227394501 lastname=test1916698072], ContactData [firstname=test820883890 lastname=test-609212113], ContactData [firstname=test762714410 lastname=test-986146047]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.ContactCreationTests.testContactCreationWithValidData(ContactCreationTests.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="testGroupCreationWithValidData" duration-ms="4536" started-at="2014-02-03T02:10:31Z" data-provider="groupsFromFile" finished-at="2014-02-03T02:10:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [groupname=test88946428]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@7999dcfe]" name="tearDown" is-config="true" duration-ms="364" started-at="2014-02-03T02:10:36Z" finished-at="2014-02-03T02:10:36Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@30d60f6e]" name="tearDown" is-config="true" duration-ms="456" started-at="2014-02-09T15:12:26Z" finished-at="2014-02-09T15:12:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
+      </class> <!-- com.example.tests.ContactCreationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
