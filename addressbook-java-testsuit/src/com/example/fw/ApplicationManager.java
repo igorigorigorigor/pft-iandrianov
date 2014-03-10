@@ -9,6 +9,10 @@ import org.netbeans.jemmy.operators.JFrameOperator;
 
 
 
+
+
+
+
 public class ApplicationManager {
 
 	private static ApplicationManager singleton;
@@ -18,6 +22,8 @@ public class ApplicationManager {
 	private Properties properties;
 
 	private JFrameOperator mainFrame;
+	
+	public MenuHelper menuhelper;
 	
 	
 	public static ApplicationManager getInstance(){
@@ -40,13 +46,9 @@ public class ApplicationManager {
 	}
 	
 	public void stop() {
-		
+		getApplication().requestClose();
 	}
 	
-	public ApplicationManager() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public FolderHelper getFolderHelper() {
 		if (folderhelper == null) {
 			folderhelper = new FolderHelper(this);
@@ -61,9 +63,15 @@ public class ApplicationManager {
 				mainFrame = new JFrameOperator("jAddressBook");
 			} catch (Exception e) {
 				e.printStackTrace();
-				return null;
 			}
 		}
 		return mainFrame;
+	}
+
+	public MenuHelper getMenuHelper() {
+		if (menuhelper == null) {
+			menuhelper = new MenuHelper(this);
+		}
+		return menuhelper;
 	}
 }

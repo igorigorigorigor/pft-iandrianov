@@ -34,7 +34,7 @@ public class TestBase {
 			configFile = "application.properties";
 		}
 		Properties properties = new Properties();
-		properties.load(new FileReader(new File(configFile)));
+		properties.load(new FileReader(configFile));
 		log.info("setUp start");
 		app = ApplicationManager.getInstance();
 		app.setProperties(properties);

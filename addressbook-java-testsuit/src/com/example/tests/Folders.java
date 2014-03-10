@@ -3,6 +3,8 @@ package com.example.tests;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class Folders {
 
 	private List<String> storedFolders = null;
@@ -16,6 +18,19 @@ public class Folders {
 		newList.storedFolders.add(folder);
 		return newList;
 	}
+	
+	
+	public Folders without(String folder) {
+		try	{
+			Folders newList = new Folders(storedFolders);
+			int index = newList.storedFolders.indexOf(folder);
+			newList.storedFolders.remove(index);
+		    return newList;	
+		} catch (ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+		}
+		return null;
+	  }
 
 	@Override
 	public int hashCode() {
