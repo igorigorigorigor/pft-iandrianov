@@ -2,29 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="16587" started-at="2014-02-15T09:16:25Z" finished-at="2014-02-15T09:16:42Z">
+  <suite name="Default suite" duration-ms="23260" started-at="2014-03-11T10:49:08Z" finished-at="2014-03-11T10:49:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16587" started-at="2014-02-15T09:16:25Z" finished-at="2014-02-15T09:16:42Z">
-      <class name="com.example.tests.CommercialCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.CommercialCreationTests@7b839aa9]" name="setUp" is-config="true" duration-ms="5945" started-at="2014-02-15T13:16:25Z" finished-at="2014-02-15T13:16:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCommercialCreationWithValidData(com.example.fw.Commercial)[pri:0, instance:com.example.tests.CommercialCreationTests@7b839aa9]" name="testCommercialCreationWithValidData" duration-ms="10507" started-at="2014-02-15T13:16:32Z" data-provider="commercialFromFile" finished-at="2014-02-15T13:16:42Z">
-=======
-  <suite name="Default suite" duration-ms="20684" started-at="2014-02-12T17:10:50Z" finished-at="2014-02-12T17:11:11Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="20684" started-at="2014-02-12T17:10:50Z" finished-at="2014-02-12T17:11:11Z">
+    <test name="Default test" duration-ms="23260" started-at="2014-03-11T10:49:08Z" finished-at="2014-03-11T10:49:32Z">
       <class name="com.example.tests.HouseCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.HouseCreationTests@5d7c1cf0]" name="setUp" is-config="true" duration-ms="3929" started-at="2014-02-12T21:10:50Z" finished-at="2014-02-12T21:10:54Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.HouseCreationTests@39a287b7]" name="setUp" is-config="true" duration-ms="6780" started-at="2014-03-11T14:49:08Z" finished-at="2014-03-11T14:49:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testApartmentCreationWithValidData(com.example.fw.House)[pri:0, instance:com.example.tests.HouseCreationTests@5d7c1cf0]" name="testApartmentCreationWithValidData" duration-ms="16641" started-at="2014-02-12T21:10:54Z" data-provider="houseFromFile" finished-at="2014-02-12T21:11:11Z">
->>>>>>> 02dc0dc30182e42118c128b15a775b3a77a8db9f
+        <test-method status="PASS" signature="testApartmentCreationWithValidData(com.example.fw.House)[pri:0, instance:com.example.tests.HouseCreationTests@39a287b7]" name="testApartmentCreationWithValidData" duration-ms="16349" started-at="2014-03-11T14:49:15Z" data-provider="houseFromFile" finished-at="2014-03-11T14:49:32Z">
           <params>
             <param index="0">
               <value>
@@ -34,13 +21,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- testCommercialCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.CommercialCreationTests@7b839aa9]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-02-15T13:16:42Z" finished-at="2014-02-15T13:16:42Z">
-=======
         </test-method> <!-- testApartmentCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.HouseCreationTests@5d7c1cf0]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-02-12T21:11:11Z" finished-at="2014-02-12T21:11:11Z">
->>>>>>> 02dc0dc30182e42118c128b15a775b3a77a8db9f
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.HouseCreationTests@39a287b7]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-03-11T14:49:32Z" finished-at="2014-03-11T14:49:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

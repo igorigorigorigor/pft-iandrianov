@@ -35,7 +35,7 @@ public class CommercialHelper extends HelperBase{
 		selectByText(By.id("fld_category_id"), comm.getCategoryOfAd());
 		selectByText(By.id("flt_param_536"), comm.getTypeOfAd());
 		selectByText(By.id("flt_param_579"), comm.getObjectType());
-		selectByText(By.id("flt_param_537"), comm.getIsBusinessReady());
+		//selectByText(By.id("flt_param_537"), comm.getIsBusinessReady());
 		type(By.id("flt_param_787"), comm.getArea());
 		type(By.id("flt_param_587"), comm.getAddress());
 		type(By.id("fld_title"), comm.getAdName());
