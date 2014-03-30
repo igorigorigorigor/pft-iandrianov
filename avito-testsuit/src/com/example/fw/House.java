@@ -13,10 +13,11 @@ public class House {
 	private String areaOfSite;
 	private String description;
 	private String price;
+	private String imagesFolder;
 	
 	public House(String categoryOfAd, String typeOfAd,  String objectType, 
 			String floorsQuantity, String wallsMaterial, String cityDistance, String subwayStation, 
-			String areaOfHouse, String areaOfSite, String description, String price) {
+			String areaOfHouse, String areaOfSite, String description, String price, String imagesFolder) {
 		this.categoryOfAd = categoryOfAd;
 		this.typeOfAd = typeOfAd;
 		this.objectType = objectType;
@@ -28,6 +29,7 @@ public class House {
 		this.areaOfSite = areaOfSite;
 		this.description = description;
 		this.price = price;
+		this.imagesFolder = imagesFolder; 
 	}
 	
 	public House(){
@@ -89,6 +91,11 @@ public class House {
 		return this;
 	} 
 	
+	public House withImagesFolder(String imagesFolder) {
+		this.imagesFolder = imagesFolder;
+		return this;
+	} 
+	
 	public String getCategoryOfAd() {
 		return categoryOfAd;
 	}
@@ -132,6 +139,10 @@ public class House {
 	public String getPrice() {
 		return price;
 	} 
+	
+	public String getImagesFolder() {
+		return imagesFolder;
+	}
 	
 	@Override
 	public String toString() {

@@ -13,10 +13,11 @@ public class Commercial implements Comparable<Commercial> {
 	private String adName;	
 	private String description;
 	private String price;
+	private String imagesFolder;
 	
 	public Commercial(String categoryOfAd, String typeOfAd,  String objectType, 
 			String isBusinessReady, String area, String subwayStation, 
-			String address, String adName, String description, String price) {
+			String address, String adName, String description, String price, String imagesFolder) {
 		this.categoryOfAd = categoryOfAd;
 		this.typeOfAd = typeOfAd;
 		this.objectType = objectType;
@@ -27,6 +28,7 @@ public class Commercial implements Comparable<Commercial> {
 		this.adName = adName;
 		this.description = description;
 		this.price = price;
+		this.imagesFolder = imagesFolder; 
 	}
 	
 	public Commercial(){
@@ -84,6 +86,10 @@ public class Commercial implements Comparable<Commercial> {
 		return this;
 	} 
 	
+	public Commercial withImagesFolder(String imagesFolder) {
+		this.imagesFolder = imagesFolder;
+		return this;
+	} 
 		
 		
 	public String getCategoryOfAd() {
@@ -126,13 +132,15 @@ public class Commercial implements Comparable<Commercial> {
 		return price;
 	} 
 	
+	public String getImagesFolder() {
+		return imagesFolder;
+	}
 	
 	@Override
 	public String toString() {
 		return "Commercial advertisement for Address: " + address;
 	}
 	
-	@Override
 	public int compareTo(Commercial other) {
 		int f = this.address.toLowerCase().compareTo(other.address.toLowerCase());
 		int t = this.address.toLowerCase().compareTo(other.address.toLowerCase());

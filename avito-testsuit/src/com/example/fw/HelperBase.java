@@ -1,6 +1,8 @@
 package com.example.fw;
 
 
+import java.io.File;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -81,4 +83,17 @@ public abstract class HelperBase {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
 		driver.findElement(By.id(id)).sendKeys(CurrentDirectory + image);
 	}
+	
+	protected void uploadAllImages(String id, String imagesFolder){
+		File folder = new File(CurrentDirectory + imagesFolder);
+		File[] listOfImages = folder.listFiles();
+		for (int i = 0; i < listOfImages.length; i++) {
+			if (listOfImages[i].isFile()) {
+		    	uploadImage(id, imagesFolder + "\\" + listOfImages[i].getName());
+		    }
+		}
+	}
 }
+		    
+		    
+

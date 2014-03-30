@@ -17,6 +17,7 @@ public class ApartmentHelper extends HelperBase {
 		
 	public ApartmentHelper createApartment(Apartment flat){
   		fillApartmentData(flat);
+  		uploadAllImages("fld_images", flat.getImagesFolder());
   		return this;
 
 	}
@@ -46,29 +47,6 @@ public class ApartmentHelper extends HelperBase {
 		type(By.id("fld_description"), flat.getDescription());
 		type(By.id("fld_price"), flat.getPrice());
 		click(By.id("package-free"));
-		
-		
-		
-		uploadImage("fld_images", "\\Bondarenko\\580616271.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616293.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616186.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616301.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616312.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616321.jpg");
-		
-		uploadImage("fld_images", "\\Bondarenko\\580615964.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616165.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616165.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\588964115.jpg");
-		
-		
-		
 		click(By.cssSelector("#package-free > div.package-label > h3"));
-		/*
-	    click(By.id("form_submit"));
-	    click(By.id("service_0"));
-	    */
-	    
 	}
-	
 }

@@ -15,12 +15,13 @@ public class Apartment implements Comparable<Apartment>{
 		private String address;
 		private String description;
 		private String price;
+		private String imagesFolder;
 		
 		
 
 		public Apartment(String subwayStation, String categoryOfAd, String typeOfAd, 
 				String numberOfRooms, String objectType, String floorNumber, String floorsQuantity, 
-				String buildingType, String area, String address, String description, String price) {
+				String buildingType, String area, String address, String description, String price, String imagesFolder) {
 			this.subwayStation = subwayStation;
 			this.categoryOfAd = categoryOfAd;
 			this.typeOfAd = typeOfAd;
@@ -33,6 +34,7 @@ public class Apartment implements Comparable<Apartment>{
 			this.address = address;
 			this.description = description;
 			this.price = price;
+			this.imagesFolder = imagesFolder; 
 		}
 		
 		public Apartment(){
@@ -99,6 +101,11 @@ public class Apartment implements Comparable<Apartment>{
 			return this;
 		} 
 		
+		public Apartment withImagesFolder(String imagesFolder) {
+			this.imagesFolder = imagesFolder;
+			return this;
+		} 
+		
 		
 		public String getSubwayStation() {
 			return subwayStation;
@@ -148,12 +155,15 @@ public class Apartment implements Comparable<Apartment>{
 			return price;
 		} 
 		
+		public String getImagesFolder() {
+			return imagesFolder;
+		}
+		
 		@Override
 		public String toString() {
 			return "Apartment advertisement for Address: " + address;
 		}
 		
-		@Override
 		public int compareTo(Apartment other) {
 			int f = this.address.toLowerCase().compareTo(other.address.toLowerCase());
 			int t = this.address.toLowerCase().compareTo(other.address.toLowerCase());

@@ -15,7 +15,7 @@ public class ApartmentCreationTests extends TestBase {
 
 	@DataProvider
 	public Iterator<Object[]> apartmentFromFile() throws IOException {
-		return wrapApartmentForDataProvider(loadApartmentFromXmlFile(new File("BondarenkoApart.xml"))).iterator();
+		return wrapApartmentForDataProvider(loadApartmentFromXmlFile(new File("VasilievoApart.xml"))).iterator();
 	}
 	
 	@Test(dataProvider = "apartmentFromFile")
