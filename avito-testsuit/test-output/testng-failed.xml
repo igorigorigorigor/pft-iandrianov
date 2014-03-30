@@ -6,7 +6,7 @@
       <class name="com.example.tests.ApartmentCreationTests">
         <methods>
           <include name="tearDown"/>
-          <include name="testApartmentCreationWithValidData"/>
+          <include name="testApartmentCreationWithValidData" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.example.tests.ApartmentCreationTests -->
