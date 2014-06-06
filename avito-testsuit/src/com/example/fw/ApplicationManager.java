@@ -26,6 +26,8 @@ public class ApplicationManager {
 	
 	public HouseHelper househelper;
 	
+	public SiteHelper sitehelper;
+	
 	
 	public ApplicationManager(Properties properties) {
 		this.properties = properties;
@@ -54,6 +56,8 @@ public class ApplicationManager {
 	    commercialhelper = new CommercialHelper(this, properties);
 	    
 	    househelper = new HouseHelper(this, properties);
+	    
+	    sitehelper = new SiteHelper(this, properties);
 	}
 	
 	public void stop() {
@@ -87,5 +91,12 @@ public class ApplicationManager {
 			househelper  = new HouseHelper(this, properties);
 		}
 		return househelper;
+	}
+	
+	public SiteHelper getsitehelper() {
+		if (sitehelper == null){
+			sitehelper  = new SiteHelper(this, properties);
+		}
+		return sitehelper;
 	}
 }

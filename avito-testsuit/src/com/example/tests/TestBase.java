@@ -16,6 +16,7 @@ import com.example.fw.Apartment;
 import com.example.fw.ApplicationManager;
 import com.example.fw.Commercial;
 import com.example.fw.House;
+import com.example.fw.Site;
 
 
 public class TestBase {
@@ -63,5 +64,14 @@ public class TestBase {
 		}
 		return list;
 	}
-}		
+	
+	@DataProvider
+	public static List<Object[]> wrapSiteForDataProvider(List<Site> sites) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (Site site : sites) {
+			list.add(new Object[]{site});
+		}
+		return list;
+	}
+	}		
 

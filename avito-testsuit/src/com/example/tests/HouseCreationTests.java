@@ -16,7 +16,7 @@ public class HouseCreationTests extends TestBase {
 	
 	@DataProvider
 	public Iterator<Object[]> houseFromFile() throws IOException {
-		return wrapHouseForDataProvider(loadHouseFromXmlFile(new File("Mirniy.xml"))).iterator();
+		return wrapHouseForDataProvider(loadHouseFromXmlFile(new File("CheboksarskayHouse.xml"))).iterator();
 	}
 	
 	@Test(dataProvider = "houseFromFile")
@@ -26,7 +26,7 @@ public class HouseCreationTests extends TestBase {
 		app.getapartmenthelper().signin();
 		
 		//actions
-		app.gethousehelper().createHouse(house);
+		app.gethousehelper().createVasilievo(house);
 		
 	}
 }
