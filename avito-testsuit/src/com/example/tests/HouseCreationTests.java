@@ -26,7 +26,7 @@ public class HouseCreationTests extends TestBase {
 		app.getapartmenthelper().signin();
 		
 		//actions
-		app.gethousehelper().createVasilievo(house);
+		app.gethousehelper().createHouse(house);
 		
 	}
 }

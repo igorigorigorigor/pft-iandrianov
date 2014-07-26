@@ -1,6 +1,7 @@
 package com.example.fw;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 
@@ -32,7 +33,7 @@ public class ApartmentHelper extends HelperBase {
 		click(By.linkText("Подать объявление"));
 		selectByText(By.id("region"), "Выбрать другой...");
 		selectByText(By.name("loc_1"), "Татарстан"); 
-		selectByText(By.name("loc_2"), "Зеленодольск");
+		selectByText(By.name("loc_2"), "Васильево");
 		click(By.id("apply_region"));
 		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
 		selectByText(By.id("flt_param_201"), flat.getTypeOfAd());
@@ -50,11 +51,11 @@ public class ApartmentHelper extends HelperBase {
 		
 	}
 
-	public void signin(){
+	public void signin() throws InterruptedException{
 		fillCredentials();
 	}
 
-	private void fillCredentials() {
+	private void fillCredentials() throws InterruptedException {
 		type(By.name("login"), properties.getProperty("login"));
 		type(By.name("password"), properties.getProperty("pass"));
 		click(By.xpath("//button[@type='submit']"));
