@@ -15,8 +15,8 @@ public class CommercialHelper extends HelperBase{
 	
 	public CommercialHelper createCommercial(Commercial comm){
   		fillCommercialData(comm);
+  		uploadAllImages("fld_images", comm.getImagesFolder());
   		return this;
-
 	}
 	
 	public void signin(){
@@ -42,28 +42,7 @@ public class CommercialHelper extends HelperBase{
 		type(By.id("fld_description"), comm.getDescription());
 		type(By.id("fld_price"), comm.getPrice());
 		click(By.id("package-free"));
-		
-		
-		uploadImage("fld_images", "\\Bondarenko\\580615964.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616165.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616128.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\588964115.jpg");
-		
-		uploadImage("fld_images", "\\Bondarenko\\580616271.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616293.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616186.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616301.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616312.jpg");
-		uploadImage("fld_images", "\\Bondarenko\\580616321.jpg");
-		
-		
-		
-		click(By.cssSelector("#package-free > div.package-label > h3"));
-		/*
-	    click(By.id("form_submit"));
-	    click(By.id("service_0"));
-	    */
-	    
+		click(By.cssSelector("#package-free > div.package-label > h3"));	    
 	}
 
 }
