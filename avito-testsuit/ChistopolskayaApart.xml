@@ -5,7 +5,7 @@
   <numberOfRooms>2</numberOfRooms>
   <objectType>Вторичка</objectType>
   <floorNumber>6</floorNumber>
-  <floorsQuantity>9</floorsQuantity>
+  <floorsQuantity>10</floorsQuantity>
   <buildingType>Панельный</buildingType>
   <area>51</area>
   <address>Чистопольская, 33</address>
@@ -15,9 +15,9 @@
   
 Два взрослых собственника. Торг.
   
-2-51-27-20
+8 904 712-27-20
 
-8904-712-27-20
+2-51-27-20
   </description><price>3390000</price>
   <imagesFolder>\\Chistopolskaya</imagesFolder>
 </Apartment>

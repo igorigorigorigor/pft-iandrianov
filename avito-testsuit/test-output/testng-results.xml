@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13183" started-at="2014-07-26T09:29:42Z" finished-at="2014-07-26T09:29:55Z">
+  <suite name="Default suite" duration-ms="22708" started-at="2014-07-31T06:06:00Z" finished-at="2014-07-31T06:06:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13183" started-at="2014-07-26T09:29:42Z" finished-at="2014-07-26T09:29:55Z">
-      <class name="com.example.tests.BondarenkoCommercialCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.BondarenkoCommercialCreationTests@49885947]" name="setUp" is-config="true" duration-ms="3814" started-at="2014-07-26T13:29:42Z" finished-at="2014-07-26T13:29:46Z">
+    <test name="Default test" duration-ms="22708" started-at="2014-07-31T06:06:00Z" finished-at="2014-07-31T06:06:23Z">
+      <class name="com.example.tests.VasilievoCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.VasilievoCreationTests@7a4ff912]" name="setUp" is-config="true" duration-ms="3579" started-at="2014-07-31T10:06:00Z" finished-at="2014-07-31T10:06:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCommercialCreationWithValidData(com.example.fw.Commercial)[pri:0, instance:com.example.tests.BondarenkoCommercialCreationTests@49885947]" name="testCommercialCreationWithValidData" duration-ms="9262" started-at="2014-07-26T13:29:46Z" data-provider="commercialFromFile" finished-at="2014-07-26T13:29:55Z">
+        <test-method status="PASS" signature="testApartmentCreationWithValidData(com.example.fw.Apartment)[pri:0, instance:com.example.tests.VasilievoCreationTests@7a4ff912]" name="testApartmentCreationWithValidData" duration-ms="19020" started-at="2014-07-31T10:06:04Z" data-provider="apartmentFromFile" finished-at="2014-07-31T10:06:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Commercial advertisement for Address: Бондаренко, 23]]>
+                <![CDATA[Apartment advertisement for Address: Васильево, ул.Первомайская, 16]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCommercialCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.BondarenkoCommercialCreationTests@49885947]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-07-26T13:29:55Z" finished-at="2014-07-26T13:29:55Z">
+        </test-method> <!-- testApartmentCreationWithValidData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.VasilievoCreationTests@7a4ff912]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-07-31T10:06:23Z" finished-at="2014-07-31T10:06:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.BondarenkoCommercialCreationTests -->
+      </class> <!-- com.example.tests.VasilievoCreationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
