@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.example.tests.BondarenkoCommercialCreationTests">
+      <class name="com.example.tests.YudinoApartmentCreationTests">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testCommercialCreationWithValidData" invocation-numbers="0"/>
+          <include name="testApartmentCreationWithValidData"/>
         </methods>
-      </class> <!-- com.example.tests.BondarenkoCommercialCreationTests -->
+      </class> <!-- com.example.tests.YudinoApartmentCreationTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
