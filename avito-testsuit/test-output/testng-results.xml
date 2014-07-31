@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68906" started-at="2014-07-31T06:47:16Z" finished-at="2014-07-31T06:48:24Z">
+  <suite name="Default suite" duration-ms="74731" started-at="2014-07-31T20:33:04Z" finished-at="2014-07-31T20:34:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68906" started-at="2014-07-31T06:47:16Z" finished-at="2014-07-31T06:48:24Z">
+    <test name="Default test" duration-ms="74731" started-at="2014-07-31T20:33:04Z" finished-at="2014-07-31T20:34:18Z">
       <class name="com.example.tests.YudinoApartmentCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.YudinoApartmentCreationTests@7a4ff912]" name="setUp" is-config="true" duration-ms="3571" started-at="2014-07-31T10:47:16Z" finished-at="2014-07-31T10:47:19Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.YudinoApartmentCreationTests@68d31619]" name="setUp" is-config="true" duration-ms="3732" started-at="2014-08-01T00:33:04Z" finished-at="2014-08-01T00:33:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testApartmentCreationWithValidData(com.example.fw.Apartment)[pri:0, instance:com.example.tests.YudinoApartmentCreationTests@7a4ff912]" name="testApartmentCreationWithValidData" duration-ms="65221" started-at="2014-07-31T10:47:19Z" data-provider="apartmentFromFile" finished-at="2014-07-31T10:48:24Z">
+        <test-method status="PASS" signature="testApartmentCreationWithValidData(com.example.fw.Apartment)[pri:0, instance:com.example.tests.YudinoApartmentCreationTests@68d31619]" name="testApartmentCreationWithValidData" duration-ms="70890" started-at="2014-08-01T00:33:07Z" data-provider="apartmentFromFile" finished-at="2014-08-01T00:34:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Apartment advertisement for Address: Привокзальная, 10]]>
+                <![CDATA[Apartment advertisement for Address: Привокзальная, 10. Юдино.]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApartmentCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.YudinoApartmentCreationTests@7a4ff912]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-07-31T10:48:24Z" finished-at="2014-07-31T10:48:24Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.YudinoApartmentCreationTests@68d31619]" name="tearDown" is-config="true" duration-ms="1" started-at="2014-08-01T00:34:18Z" finished-at="2014-08-01T00:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
