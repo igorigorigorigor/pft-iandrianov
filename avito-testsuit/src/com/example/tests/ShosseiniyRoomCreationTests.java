@@ -25,7 +25,7 @@ public class ShosseiniyRoomCreationTests extends TestBase {
 		app.getapartmenthelper().signin();
 		
 		//actions
-		app.getapartmenthelper().createApartment(flat);
+		app.getapartmenthelper().createRoom(flat);
 		
 	}
 }

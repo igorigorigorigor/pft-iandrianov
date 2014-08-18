@@ -20,7 +20,12 @@ public class ApartmentHelper extends HelperBase {
   		fillApartmentData(flat);
   		uploadAllImages("fld_images", flat.getImagesFolder());
   		return this;
-
+	}
+	
+	public ApartmentHelper createRoom(Apartment flat){
+  		fillRoomData(flat);
+  		uploadAllImages("fld_images", flat.getImagesFolder());
+  		return this;
 	}
 	
 	public ApartmentHelper createVasilievo(Apartment flat) {
@@ -79,7 +84,23 @@ public class ApartmentHelper extends HelperBase {
 		click(By.cssSelector("#package-free > div.package-label > h3"));
 	}
 
-	
+	private void fillRoomData(Apartment flat) {
+		click(By.linkText("Подать объявление"));
+		selectByText(By.id("fld_metro_id"), flat.getSubwayStation());
+		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
+		selectByText(By.id("flt_param_200"), flat.getTypeOfAd());
+		selectByText(By.id("flt_param_511"), flat.getNumberOfRooms());
+		//selectByText(By.id("flt_param_517"), flat.getObjectType());
+		selectByText(By.id("flt_param_513"), flat.getFloorNumber());
+		selectByText(By.id("flt_param_515"), flat.getFloorsQuantity());
+		selectByText(By.id("flt_param_517"), flat.getBuildingType());
+		type(By.id("flt_param_509"), flat.getArea());
+		type(By.id("flt_param_507"), flat.getAddress());
+		type(By.id("fld_description"), flat.getDescription());
+		type(By.id("fld_price"), flat.getPrice());
+		click(By.id("package-free"));
+		click(By.cssSelector("#package-free > div.package-label > h3"));
+	}
 
 		
 }
