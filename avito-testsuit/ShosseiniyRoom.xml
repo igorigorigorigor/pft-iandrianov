@@ -1,0 +1,28 @@
+<Apartment>
+  <subwayStation>Козья Слобода</subwayStation>
+  <categoryOfAd>Комнаты</categoryOfAd>
+  <typeOfAd>Продам</typeOfAd>
+  <numberOfRooms>1</numberOfRooms>
+  <objectType>Вторичка</objectType>
+  <floorNumber>2</floorNumber>
+  <floorsQuantity>5</floorsQuantity>
+  <buildingType>Панельный</buildingType>
+  <area>13</area>
+  <address>Шоссейный переулок, 7</address>
+  <description>Комната 13,1 кв.м. в общежитии коридорного типа. Комната не угловая. 
+
+На этаже имеется кухня, туалет, умывальная комната.
+
+Остается мебель (угловой шкаф-купе, диван, стол, стулья, детская мебель с кроваткой на верхнем уровне), стиральная машина.
+
+Хорошая железная дверь. Запираемый подъезд.
+
+Тихий зеленый двор.
+
+Рядом ТК "Metro", новый детский сад, магазины. На трамвае до центра, до ж\д вокзала - 2 остановки. 15 минут пешком до станции метро - Козья Слобода. 
+
+Один взрослый собственник. Чистая продажа.
+</description>
+  <price>760000</price>
+  <imagesFolder>\\ShosseiniyRoom</imagesFolder>
+</Apartment>
