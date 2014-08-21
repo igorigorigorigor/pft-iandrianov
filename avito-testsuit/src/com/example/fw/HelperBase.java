@@ -80,8 +80,9 @@ public abstract class HelperBase {
 	}
 	
 	protected void uploadImage(String id, String image) {
-		wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
-		driver.findElement(By.id(id)).sendKeys(CurrentDirectory + image);
+		//wait.until(ExpectedConditions.elementToBeClickable(By.name(id)));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.name(id)));
+		driver.findElement(By.name(id)).sendKeys(CurrentDirectory + image);
 	}
 	
 	protected void uploadAllImages(String id, String imagesFolder){

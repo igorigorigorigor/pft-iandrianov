@@ -18,19 +18,19 @@ public class ApartmentHelper extends HelperBase {
 		
 	public ApartmentHelper createApartment(Apartment flat){
   		fillApartmentData(flat);
-  		uploadAllImages("fld_images", flat.getImagesFolder());
+  		uploadAllImages("image", flat.getImagesFolder());
   		return this;
 	}
 	
 	public ApartmentHelper createRoom(Apartment flat){
   		fillRoomData(flat);
-  		uploadAllImages("fld_images", flat.getImagesFolder());
+  		uploadAllImages("image", flat.getImagesFolder());
   		return this;
 	}
 	
 	public ApartmentHelper createVasilievo(Apartment flat) {
 		fillVasilievoData(flat);
-  		uploadAllImages("fld_images", flat.getImagesFolder());
+  		uploadAllImages("image", flat.getImagesFolder());
   		return this;
 	}
 	

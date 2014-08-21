@@ -15,7 +15,7 @@ public class CommercialHelper extends HelperBase{
 	
 	public CommercialHelper createCommercial(Commercial comm){
   		fillCommercialData(comm);
-  		uploadAllImages("fld_images", comm.getImagesFolder());
+  		uploadAllImages("image", comm.getImagesFolder());
   		return this;
 	}
 	
