@@ -21,4 +21,9 @@
        <class name="com.example.tests.ShosseiniyRoomCreationTests" />
     </classes>
   </test>
+  <test name="VasilievoAp">
+    <classes>
+       <class name="com.example.tests.VasilievoCreationTests" />
+    </classes>
+  </test>
 </suite>  
