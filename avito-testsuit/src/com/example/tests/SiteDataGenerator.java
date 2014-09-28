@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-
-import com.example.fw.Apartment;
-import com.example.fw.House;
 import com.example.fw.Site;
 import com.thoughtworks.xstream.XStream;
 

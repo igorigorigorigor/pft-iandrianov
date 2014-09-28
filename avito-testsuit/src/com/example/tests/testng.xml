@@ -26,9 +26,4 @@
        <class name="com.example.tests.VasilievoCreationTests" />
     </classes>
   </test>
-  <test name="YudinoAp">
-    <classes>
-       <class name="com.example.tests.YudinoApartmentCreationTests" />
-    </classes>
-  </test>
 </suite>  
