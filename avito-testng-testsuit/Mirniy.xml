@@ -1,0 +1,27 @@
+<House>
+  <categoryOfAd>Дома, дачи, коттеджи</categoryOfAd>
+  <typeOfAd>Продам</typeOfAd>
+  <objectType>Дом</objectType>
+  <floorsQuantity>1</floorsQuantity>
+  <wallsMaterial>Брус</wallsMaterial>
+  <cityDistance>В черте города</cityDistance>
+  <subwayStation>-- Выберите станцию метро --</subwayStation>
+  <areaOfHouse>90</areaOfHouse>
+  <areaOfSite>6</areaOfSite>
+  <description>
+  Поселок Мирный, улица 3-я Рубежная. Одноэтажный деревенский деревянный дом:
+
+- свет;
+
+- вода централизованная;
+
+- газ;
+
+- автономное отопление;
+
+- канализация(слив).
+
+Крыша - оцинкованная. В доме четыре комнаты, кухня (17,3 кв.м), туалет. Баня - сруб, на газу. Плодоносящий ухоженный сад - площадью 6.5 соток. Рядом сосновый бор. Один взрослый собственник. Торг.
+  </description>
+  <price>2600000</price>
+</House>

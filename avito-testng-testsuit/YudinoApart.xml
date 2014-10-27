@@ -1,0 +1,27 @@
+<Apartment>
+  <subwayStation>Козья Слобода</subwayStation>
+  <categoryOfAd>Квартиры</categoryOfAd>
+  <typeOfAd>Продам</typeOfAd>
+  <numberOfRooms>1</numberOfRooms>
+  <objectType>Вторичка</objectType>
+  <floorNumber>2</floorNumber>
+  <floorsQuantity>5</floorsQuantity>
+  <buildingType>Кирпичный</buildingType>
+  <area>37</area>
+  <address>Привокзальная, 10 (Юдино)</address>
+  <description>37\18\8,7. Венгерский проект. Хорошее состояние. Глубокая лоджия - 5 кв.м. Квартира не угловая. 
+  
+Пластиковые окна. Новые межкомнатные двери. Натяжной потолок. 
+  
+Санузел совмещенный. Трубы заменены. Имеются счетчики воды.
+  
+Хорошая импортная стеклокерамическая плита. В прихожей имеется глубокая кладовка. Подъезд запираемый.
+  
+В трех минутах ходьбы ж\д станция "Юдино", автобусная остановка. 
+  
+Сразу за домом река Волга и пляж.
+  
+Один взрослый собственник. </description>
+  <price>1860000</price>
+  <imagesFolder>\\Yudino</imagesFolder>
+</Apartment>

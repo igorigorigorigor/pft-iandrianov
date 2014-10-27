@@ -1,0 +1,26 @@
+<Apartment>
+  <subwayStation>-- Выберите станцию метро --</subwayStation>
+  <categoryOfAd>Квартиры</categoryOfAd>
+  <typeOfAd>Продам</typeOfAd>
+  <numberOfRooms>3</numberOfRooms>
+  <objectType>Вторичка</objectType>
+  <floorNumber>5</floorNumber>
+  <floorsQuantity>5</floorsQuantity>
+  <buildingType>Кирпичный</buildingType>
+  <area>65</area>
+  <address>Васильево, ул.Первомайская, 16</address>
+  <description>
+65\40\8. Поблизости ж\д станция Васильево, санаторий "Васильевский", рынок, магазины.
+
+1. Санузел раздельный, Централизованная горячая вода;
+2. Коридор 8,7 кв.м.;
+3. Окна на обе стороны, Лоджия застеклена - выход из кухни;
+4. Хорошая железная дверь, Чистый подъезд;
+5. Во дворе есть парковочные места;
+
+Рядом лес (десять минут ходьбы). Детский сад во дворе. В поселке три школы.
+
+Один взрослый собственник. Торг.</description>
+  <price>2090000</price>
+  <imagesFolder>\\Vasilievo</imagesFolder>
+</Apartment>

@@ -1,0 +1,22 @@
+<House>
+  <categoryOfAd>Дома, дачи, коттеджи</categoryOfAd>
+  <typeOfAd>Продам</typeOfAd>
+  <objectType>Дом</objectType>
+  <floorsQuantity>1</floorsQuantity>
+  <wallsMaterial>Брус</wallsMaterial>
+  <cityDistance>В черте города</cityDistance>
+  <subwayStation>Аметьево</subwayStation>
+  <areaOfHouse>44</areaOfHouse>
+  <areaOfSite>7</areaOfSite>
+  <description>Ул.Чебоксарская. Поблизости центр города, метро "Аметьево". Участок ровный, ухоженный. С двух сторон есть хорошие асфальтированные подъездные пути.
+
+Имеется старый, но теплый и крепкий одноэтажный дом (кирпич, бревно) - 43,5 кв.м. В доме электричество, газ, АГВ. Ходит автобус.
+
+Документы готовы. Один взрослый собственник. Чистая продажа. Торг.
+
+2-51-27-20
+
+8 904 712-27-20</description>
+  <price>4600000</price>
+  <imagesFolder>\\Cheboksarskay</imagesFolder>
+</House>
