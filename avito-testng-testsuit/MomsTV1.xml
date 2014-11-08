@@ -1,0 +1,10 @@
+<Apartment>
+  <subwayStation>Козья Слобода</subwayStation>
+  <categoryOfAd>Аудио и видео</categoryOfAd>
+  <typeOfAd>Телевизоры и проекторы</typeOfAd>
+  <objectType>Продам 21" телевизор Toshiba 2125XSR</objectType>
+  <description>Замечательный ЭЛТ телевизор с отличным качеством изображения. Подходит для просмотра как обычного, так и кабельного HD-телевидения. Диагональ - 21 дюйм. Пульт в хорошем состоянии. Самовывоз.
+</description>
+  <price>1500</price>
+  <imagesFolder>\\MomsTV1</imagesFolder>
+</Apartment>
