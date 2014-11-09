@@ -2,14 +2,14 @@ package com.example.tests;
 
 import static com.example.tests.CommercialDataGenerator.loadCommercialFromXmlFile;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
 import com.example.fw.Commercial;
-
-import java.io.*;
-import java.util.Iterator;
 
 
 public class BondarenkoCommercialCreationTests extends TestBase {
@@ -20,14 +20,14 @@ public class BondarenkoCommercialCreationTests extends TestBase {
 	}
 	
 	@Test(dataProvider = "commercialFromFile")
-	public void testCommercialCreationWithValidData(Commercial comm) throws Exception {
+	public void testApartmentCreationWithValidData(Commercial comm) throws Exception {
 		
 		//sign in
-		app.getcommercialhelper().signin();
+		app.getapartmenthelper().signin();
 		
 		//actions
 		app.getcommercialhelper().createCommercial(comm);
 		
 	}
-
 }
+
