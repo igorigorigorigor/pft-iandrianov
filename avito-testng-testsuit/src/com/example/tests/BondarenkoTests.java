@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import com.example.fw.Commercial;
 
 
-public class BondarenkoCommercialCreationTests extends TestBase {
+public class BondarenkoTests extends TestBase {
 
 	@DataProvider
 	public Iterator<Object[]> commercialFromFile() throws IOException {
@@ -30,4 +30,3 @@ public class BondarenkoCommercialCreationTests extends TestBase {
 		
 	}
 }
-
