@@ -2,30 +2,40 @@ package com.example.tests;
 
 import static com.example.tests.ApartmentDataGenerator.loadApartmentFromXmlFile;
 
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import java.io.File;
+import java.io.IOException;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 import com.example.fw.Apartment;
 
-import java.io.*;
-import java.util.Iterator;
 
-
+@RunWith(Parameterized.class)
 public class VasilievoCreationTests extends TestBase {
 
-	@DataProvider
-	public Iterator<Object[]> apartmentFromFile() throws IOException {
-		return wrapApartmentForDataProvider(loadApartmentFromXmlFile(new File("VasilievoApart.xml"))).iterator();
+	@Parameters
+	public static Collection<Object[]> apartmentFromFile() throws IOException {
+		return wrapApartmentForDataProvider(loadApartmentFromXmlFile(new File("VasilievoApart.xml")));
 	}
 	
-	@Test(dataProvider = "apartmentFromFile")
-	public void testApartmentCreationWithValidData(Apartment flat) throws Exception {
+	private Apartment fFlat;
+	
+	public VasilievoCreationTests(Apartment flat){
+		fFlat = flat;
+	}
+		
+	@Test
+	public void testApartmentCreationWithValidData() throws Exception {
 		
 		//sign in
 		app.getapartmenthelper().signin();
 		
 		//actions
-		app.getapartmenthelper().createVasilievo(flat);
+		app.getapartmenthelper().createVasilievo(fFlat);
 		
 	}
 }

@@ -4,29 +4,37 @@ import static com.example.tests.HouseDataGenerator.loadHouseFromXmlFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
+import java.util.Collection;
 
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 import com.example.fw.House;
 
+@RunWith(Parameterized.class)
 public class HouseCreationTests extends TestBase {
-	
-	
-	@DataProvider
-	public Iterator<Object[]> houseFromFile() throws IOException {
-		return wrapHouseForDataProvider(loadHouseFromXmlFile(new File("CheboksarskayHouse.xml"))).iterator();
+		
+	@Parameters
+	public static Collection<Object[]> houseFromFile() throws IOException {
+		return wrapHouseForDataProvider(loadHouseFromXmlFile(new File("CheboksarskayHouse.xml")));
 	}
 	
-	@Test(dataProvider = "houseFromFile")
-	public void testApartmentCreationWithValidData(House house) throws Exception {
+	private House fHouse;
+	
+	public HouseCreationTests(House house){
+		fHouse = house;
+	}
+	
+	@Test
+	public void testApartmentCreationWithValidData() throws Exception {
 		
 		//sign in
 		app.getapartmenthelper().signin();
 		
 		//actions
-		app.gethousehelper().createHouse(house);
+		app.gethousehelper().createHouse(fHouse);
 		
 	}
 }
