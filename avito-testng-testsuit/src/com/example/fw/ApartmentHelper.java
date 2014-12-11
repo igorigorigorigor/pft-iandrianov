@@ -40,7 +40,7 @@ public class ApartmentHelper extends HelperBase {
 		selectByText(By.name("loc_2"), "Васильево");
 		click(By.id("apply_region"));
 		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
-		selectByText(By.id("flt_param_201"), flat.getTypeOfAd());
+		selectByText(By.xpath("//*[@class='filter form-input-select']"), flat.getTypeOfAd());
 		selectByText(By.id("flt_param_549"), flat.getNumberOfRooms());
 		selectByText(By.id("flt_param_499"), flat.getObjectType());
 		selectByText(By.id("flt_param_496"), flat.getFloorNumber());
@@ -69,7 +69,9 @@ public class ApartmentHelper extends HelperBase {
 		click(By.linkText("Подать объявление"));
 		selectByText(By.id("fld_metro_id"), flat.getSubwayStation());
 		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
-		selectByText(By.id("flt_param_201"), flat.getTypeOfAd());
+		selectByText(By.xpath("//select[@class='filter form-input-select']"), flat.getTypeOfAd());
+		//selectByText(By.id("flt_param_201"), flat.getTypeOfAd());
+		
 		selectByText(By.id("flt_param_549"), flat.getNumberOfRooms());
 		selectByText(By.id("flt_param_499"), flat.getObjectType());
 		selectByText(By.id("flt_param_496"), flat.getFloorNumber());
