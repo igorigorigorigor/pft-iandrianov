@@ -79,6 +79,14 @@ public abstract class HelperBase {
 		}
 	}
 	
+	protected String getSelectedOptionText(By locator) {
+		return new Select(driver.findElement(locator)).getFirstSelectedOption().getText();
+	}
+	
+	protected String getText(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
 	protected void uploadImage(String id, String image) {
 		//wait.until(ExpectedConditions.elementToBeClickable(By.name(id)));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.name(id)));

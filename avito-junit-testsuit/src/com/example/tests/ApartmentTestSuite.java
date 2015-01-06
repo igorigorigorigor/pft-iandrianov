@@ -15,7 +15,7 @@ import com.example.fw.Apartment;
 
 
 @RunWith(Parameterized.class)
-public class VasilievoCreationTests extends TestBase {
+public class ApartmentTestSuite extends TestBase {
 
 	@Parameters
 	public static Collection<Object[]> apartmentFromFile() throws IOException {
@@ -24,7 +24,7 @@ public class VasilievoCreationTests extends TestBase {
 	
 	private Apartment fFlat;
 	
-	public VasilievoCreationTests(Apartment flat){
+	public ApartmentTestSuite(Apartment flat){
 		fFlat = flat;
 	}
 		
@@ -36,9 +36,6 @@ public class VasilievoCreationTests extends TestBase {
 		
 		//actions
 		app.getapartmenthelper().createVasilievo(fFlat);
-
-		//asserts
-		app.getapartmenthelper().checkParams(fFlat);
 		
 	}
 }

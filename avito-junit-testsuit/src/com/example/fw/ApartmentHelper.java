@@ -2,7 +2,9 @@ package com.example.fw;
 
 import java.util.Properties;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import static org.hamcrest.Matchers.*;
 
 
 
@@ -40,7 +42,7 @@ public class ApartmentHelper extends HelperBase {
 		selectByText(By.name("loc_2"), "Васильево");
 		click(By.id("apply_region"));
 		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
-		selectByText(By.id("flt_param_201"), flat.getTypeOfAd());
+		selectByText(By.xpath("//*[@data-name='params[201]']"), flat.getTypeOfAd());
 		selectByText(By.id("flt_param_549"), flat.getNumberOfRooms());
 		selectByText(By.id("flt_param_499"), flat.getObjectType());
 		selectByText(By.id("flt_param_496"), flat.getFloorNumber());
@@ -101,5 +103,17 @@ public class ApartmentHelper extends HelperBase {
 		click(By.cssSelector("#package-free > div.package-label > h3"));
 	}
 
-		
+	public void checkParams(Apartment flat) {
+		Assert.assertThat(getSelectedOptionText(By.id("fld_category_id")), equalTo(flat.getCategoryOfAd()));
+		Assert.assertThat(getSelectedOptionText(By.xpath("//*[@data-name='params[201]']")), equalTo(flat.getTypeOfAd()));
+		Assert.assertThat(getSelectedOptionText(By.id("flt_param_549")), equalTo(flat.getNumberOfRooms())); 
+		Assert.assertThat(getSelectedOptionText(By.id("flt_param_499")), equalTo(flat.getObjectType())); 
+		Assert.assertThat(getSelectedOptionText(By.id("flt_param_496")), equalTo(flat.getFloorNumber()));
+		Assert.assertThat(getSelectedOptionText(By.id("flt_param_497")), equalTo(flat.getFloorsQuantity())); 
+		Assert.assertThat(getSelectedOptionText(By.id("flt_param_498")), equalTo(flat.getBuildingType())); 
+		Assert.assertThat(getText(By.id("flt_param_578")), equalTo(flat.getArea()));
+		Assert.assertThat(getText(By.id("flt_param_494")), equalTo(flat.getAddress())); 
+		Assert.assertThat(getText(By.id("fld_description")), equalTo(flat.getDescription())); 
+		Assert.assertThat(getText(By.id("fld_price")), equalTo(flat.getPrice()));
+	}
 }
