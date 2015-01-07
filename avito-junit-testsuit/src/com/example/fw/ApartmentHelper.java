@@ -2,8 +2,13 @@ package com.example.fw;
 
 import java.util.Properties;
 
+import net.thucydides.core.annotations.Step;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
+
+import com.example.pages.ApartmentPage;
+
 import static org.hamcrest.Matchers.*;
 
 
@@ -11,6 +16,8 @@ import static org.hamcrest.Matchers.*;
 public class ApartmentHelper extends HelperBase {
 
 	private Properties properties;
+	
+	private ApartmentPage apartmentPage = new ApartmentPage(driver);
 		
 	public ApartmentHelper(ApplicationManager manager, Properties properties) {
 		super(manager);
@@ -29,36 +36,33 @@ public class ApartmentHelper extends HelperBase {
   		return this;
 	}
 	
-	public ApartmentHelper createVasilievo(Apartment flat) {
-		fillVasilievoData(flat);
-  		uploadAllImages("image", flat.getImagesFolder());
+	@Step
+	public void signin() throws InterruptedException{
+		fillCredentials();
+	}
+	
+	@Step
+	public ApartmentHelper createNewAd() {
+		apartmentPage.createNewAd();;
   		return this;
 	}
 	
-	private void fillVasilievoData(Apartment flat) {
-		click(By.linkText("Подать объявление"));
-		selectByText(By.id("region"), "Выбрать другой...");
-		selectByText(By.name("loc_1"), "Татарстан"); 
-		selectByText(By.name("loc_2"), "Васильево");
-		click(By.id("apply_region"));
-		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
-		selectByText(By.xpath("//*[@data-name='params[201]']"), flat.getTypeOfAd());
-		selectByText(By.id("flt_param_549"), flat.getNumberOfRooms());
-		selectByText(By.id("flt_param_499"), flat.getObjectType());
-		selectByText(By.id("flt_param_496"), flat.getFloorNumber());
-		selectByText(By.id("flt_param_497"), flat.getFloorsQuantity());
-		selectByText(By.id("flt_param_498"), flat.getBuildingType());
-		type(By.id("flt_param_578"), flat.getArea());
-		type(By.id("flt_param_494"), flat.getAddress());
-		type(By.id("fld_description"), flat.getDescription());
-		type(By.id("fld_price"), flat.getPrice());
-		click(By.id("package-free"));
-		click(By.cssSelector("#package-free > div.package-label > h3"));
-		
+	@Step
+	public ApartmentHelper selectVasilievoLocation(Apartment flat) {
+		apartmentPage.selectVasilievoLocation(flat);
+  		return this;
 	}
-
-	public void signin() throws InterruptedException{
-		fillCredentials();
+	
+	@Step
+	public ApartmentHelper fillApartmentData(Apartment flat) {
+		apartmentPage.fillApartmentData(flat);
+  		return this;
+	}
+	
+	@Step
+	public ApartmentHelper uploadImages(Apartment flat) {
+  		uploadAllImages("image", flat.getImagesFolder());
+  		return this;
 	}
 
 	private void fillCredentials() throws InterruptedException {
@@ -67,23 +71,6 @@ public class ApartmentHelper extends HelperBase {
 		click(By.xpath("//button[@type='submit']"));
 	}
 	
-	private void fillApartmentData(Apartment flat) {
-		click(By.linkText("Подать объявление"));
-		selectByText(By.id("fld_metro_id"), flat.getSubwayStation());
-		selectByText(By.id("fld_category_id"), flat.getCategoryOfAd());
-		selectByText(By.id("flt_param_201"), flat.getTypeOfAd());
-		selectByText(By.id("flt_param_549"), flat.getNumberOfRooms());
-		selectByText(By.id("flt_param_499"), flat.getObjectType());
-		selectByText(By.id("flt_param_496"), flat.getFloorNumber());
-		selectByText(By.id("flt_param_497"), flat.getFloorsQuantity());
-		selectByText(By.id("flt_param_498"), flat.getBuildingType());
-		type(By.id("flt_param_578"), flat.getArea());
-		type(By.id("flt_param_494"), flat.getAddress());
-		type(By.id("fld_description"), flat.getDescription());
-		type(By.id("fld_price"), flat.getPrice());
-		click(By.id("package-free"));
-		click(By.cssSelector("#package-free > div.package-label > h3"));
-	}
 
 	private void fillRoomData(Apartment flat) {
 		click(By.linkText("Подать объявление"));
@@ -102,7 +89,8 @@ public class ApartmentHelper extends HelperBase {
 		click(By.id("package-free"));
 		click(By.cssSelector("#package-free > div.package-label > h3"));
 	}
-
+	
+	@Step
 	public void checkParams(Apartment flat) {
 		Assert.assertThat(getSelectedOptionText(By.id("fld_category_id")), equalTo(flat.getCategoryOfAd()));
 		Assert.assertThat(getSelectedOptionText(By.xpath("//*[@data-name='params[201]']")), equalTo(flat.getTypeOfAd()));

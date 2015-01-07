@@ -6,23 +6,27 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 
+import net.thucydides.core.annotations.Steps;
+import net.thucydides.junit.annotations.TestData;
+import net.thucydides.junit.runners.ThucydidesParameterizedRunner;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
 
 import com.example.fw.Apartment;
+import com.example.pages.ApartmentPage;
 
 
-@RunWith(Parameterized.class)
+@RunWith(ThucydidesParameterizedRunner.class)
 public class VasilievoCreationTests extends TestBase {
 
-	@Parameters
+	@TestData  
 	public static Collection<Object[]> apartmentFromFile() throws IOException {
 		return wrapApartmentForDataProvider(loadApartmentFromXmlFile(new File("VasilievoApart.xml")));
 	}
 	
-	private Apartment fFlat;
+	@Steps
+	public ApartmentPage apartmentPage = new ApartmentPage(driver);
 	
 	public VasilievoCreationTests(Apartment flat){
 		fFlat = flat;
@@ -35,10 +39,13 @@ public class VasilievoCreationTests extends TestBase {
 		app.getapartmenthelper().signin();
 		
 		//actions
-		app.getapartmenthelper().createVasilievo(fFlat);
+		apartmentPage.createNewAd();
 
-		//asserts
-		app.getapartmenthelper().checkParams(fFlat);
+		apartmentPage.selectVasilievoLocation(fFlat);
+		
+		apartmentPage.fillApartmentData(fFlat);
+		
+		app.getapartmenthelper().uploadImages(fFlat);
 		
 	}
 }

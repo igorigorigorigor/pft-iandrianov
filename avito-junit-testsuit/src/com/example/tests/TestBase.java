@@ -8,9 +8,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.ManagedPages;
+import net.thucydides.core.pages.Pages;
 
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.WebDriver;
 
 import com.example.fw.Apartment;
 import com.example.fw.ApplicationManager;
@@ -20,15 +26,27 @@ import com.example.fw.Site;
 
 
 public class TestBase {
-	
+	public String baseUrl;
+	public boolean acceptNextAlert = true;
+	public Apartment fFlat;
 	protected ApplicationManager app;
-
+	
+	@Managed
+    public WebDriver driver;
+	
+	@ManagedPages(defaultUrl = "https://avito.ru/")
+	public Pages pages;
+	
+	
 	@Before
 	public void setUp() throws Exception {
 		String configFile = System.getProperty("configFile", "chrome.properties");
 		Properties properties = new Properties();
 		properties.load(new FileReader(new File(configFile)));
 		app = new ApplicationManager(properties);
+		baseUrl = properties.getProperty("baseUrl");
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.get(baseUrl);
 	  }
 	
 	@After

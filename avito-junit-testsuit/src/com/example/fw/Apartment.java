@@ -1,6 +1,8 @@
 package com.example.fw;
 
+import net.thucydides.core.annotations.Feature;
 
+@Feature
 public class Apartment implements Comparable<Apartment>{
 
 		private String subwayStation;
