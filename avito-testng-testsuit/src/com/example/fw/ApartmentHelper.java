@@ -103,5 +103,10 @@ public class ApartmentHelper extends HelperBase {
 		click(By.cssSelector("#package-free > div.package-label > h3"));
 	}
 
+	public void editTv(Apartment tv) {
+		click(By.xpath("//*[@class='i i-add-photo']"));
+		uploadAllImages("image", tv.getImagesFolder());
+	}
+
 		
 }
